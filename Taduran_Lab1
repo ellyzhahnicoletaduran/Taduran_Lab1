@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class HalfDiamondPattern {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter number: ");
+        int n = scanner.nextInt();
+
+        // Upper part of the half-diamond
+        for (int i = 1; i <= n; i++) {
+            System.out.print("*");
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j);
+            }
+            for (int j = i - 1; j >= 1; j--) {
+                System.out.print(j);
+            }
+            System.out.println("*");
+        }
+
+        // Middle part of the half-diamond
+        for (int i = n; i >= 1; i--) {
+            System.out.print("*");
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j);
+            }
+            for (int j = i - 1; j >= 1; j--) {
+                System.out.print(j);
+            }
+            System.out.println("*");
+        }
+    }
+}
